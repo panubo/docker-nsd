@@ -8,7 +8,7 @@ RUN groupadd -g 108 nsd && \
 RUN mkdir /run/nsd /var/lib/nsd/zones && \
   chown nsd:nsd /run/nsd /var/lib/nsd/zones
 
-COPY nsd.conf /etc/nsd/nsd.conf
+COPY nsd.conf /etc/.nsd_defaults/nsd.conf
 COPY entry.sh /
 
 VOLUME ["/etc/nsd","/var/lib/nsd"]
